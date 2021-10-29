@@ -26,3 +26,16 @@
           group: tomcat 
           home: /user/share/tomcat
           createhome: no
+      - name: download and unarchive
+        unarchive:
+          src: tomcat_url
+          dest: /opt/tomcat 
+          remote_src: yes
+      - name: change ownership
+        file:
+          path: /opt/tomcat 
+          owner: tomcat 
+          group: tomcat 
+          mode: "u+rwx,g+rx,o=rx"
+          recurse: yes
+          state: directory
