@@ -36,7 +36,7 @@
           src: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.tar.gz
           dest: /opt/tomcat 
           remote_src: yes
-          extra_opts: [--stripe-componets=1]
+          extra_opts: [--stripe-components=1]
       - name: change ownership
         file:
           path: /opt/tomcat 
