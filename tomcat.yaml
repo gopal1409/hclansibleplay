@@ -9,8 +9,8 @@
     tasks:
       - name: update the repos
         apt:
-          name: "*"
-          state: latest
+         name: "*"
+         state: latest
       - name: install the required java 
         apt:
           name: "{{req_java}}"  
